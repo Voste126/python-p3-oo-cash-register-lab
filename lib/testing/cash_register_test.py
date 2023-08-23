@@ -39,10 +39,10 @@ class TestCashRegister:
 
     def test_add_item_optional_quantity(self):
         '''also accepts an optional quantity.'''
-        self.cash_register.add_item("book", 5.00, 3)
-        assert(self.cash_register.total == 15.00)
-        # self.cash_register.total = 0
+        self.cash_register.add_item_optional_quantity("book", 5.00, 3)
+        assert self.cash_register.total == 15.00
         self.reset_register_totals()
+
 
     def test_add_item_with_multiple_items(self):
         '''doesn"t forget about the previous total'''
